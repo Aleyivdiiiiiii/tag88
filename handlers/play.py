@@ -264,7 +264,7 @@ async def play(_, message: Message):
         [
             [
                 InlineKeyboardButton("📚 Bilgi", url=f"https://t.me/Cosmic_MMC"),
-                InlineKeyboardButton("👩‍💻 Sahib, url=f"https://t.me/DexRoFF"),
+                InlineKeyboardButton("👩‍💻 Sahib", url=f"https://t.me/DexRoFF"),
             ],[
                 InlineKeyboardButton("✨ Kapat", callback_data="cls"),
             ],
