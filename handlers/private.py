@@ -126,7 +126,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Merhaba {query.from_user.mention} 🎵\nBen {bot}!\nSesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetimi yetkisi verip, Asistanı gruba ekleyiniz.\n\nDüzen Tasarım [Talia Müzik 🎙️](https://t.me/Sohbetdestek).**""",
+    await query.edit_message_text(f"""**Merhaba {query.from_user.mention} 🎵\nBen {bot}!\nSesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetimi yetkisi verip, Asistanı gruba ekleyiniz.\n\nDüzen Tasarım [DexRoFF](https://t.me/DexRoFF).**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -144,7 +144,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌀 Komutlar" , callback_data= "cbbilgi"
+                        "🛠️ Komutlar" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
                         "Resmi Kanal 🇹🇷", url=f"https://t.me/Cosmic_MMC"
