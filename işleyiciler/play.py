@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **ʟüᴛꜰᴇɴ ʙᴇᴋʟᴇʏiɴiᴢ...**")
+    lel = await message.reply(" **✨**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -152,7 +152,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
+        thumb_name = "https://ibb.co/dGCgbSg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Yerel olarak eklendi"
@@ -161,7 +161,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="✨ Kapat",
+                        text="❌ Kapat",
                         callback_data="cls")
                    
                 ]
@@ -198,16 +198,16 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📚 Bilgi", url=f"https://t.me/DexRoFF"),
-                InlineKeyboardButton(" Kanal", url=f"https://t.me/Cosmic_MMC"),
+                InlineKeyboardButton("🎧 Music Kanal", url=f"https://t.me/playIistim"),
+                InlineKeyboardButton("👨🏻‍💻 Creator", url=f"https://t.me/A_l_i_y_e_v_d_i"),
             ],[
-                InlineKeyboardButton("✨ Kapat", callback_data="cls"),
+                InlineKeyboardButton("❌ Kapat", callback_data="cls"),
             ],
         ]
     )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
+            thumb_name = "https://ibb.co/dGCgbSg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -228,11 +228,11 @@ async def play(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🤔 **Dinlemek istediğin şarkı nedir?**")
-        await lel.edit("🔎 **Lütfen bekleyiniz...**")
+            return await lel.edit("🤓 **Dinlemek istediğin şarkı nedir?**")
+        await lel.edit(" **✨**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🔄 **Ses İşleniyor..🔥**")
+        await lel.edit(" **⚡**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -263,10 +263,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📚 Bilgi", url=f"https://t.me/Cosmic_MMC"),
-                InlineKeyboardButton("👩‍💻 Sahib", url=f"https://t.me/DexRoFF"),
+                InlineKeyboardButton("🎧 Music Kanal", url=f"https://t.me/playIistim"),
+                InlineKeyboardButton("👩‍💻 Creator", url=f"https://t.me/A_l_i_y_e_v_d_i"),
             ],[
-                InlineKeyboardButton("✨ Kapat", callback_data="cls"),
+                InlineKeyboardButton("❌ Kapat", callback_data="cls"),
             ],
         ]
     )
